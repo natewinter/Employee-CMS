@@ -21,7 +21,7 @@ CREATE TABLE employeeTb(
     first_name VARCHAR(30),
     last_name VARCHAR(30),
     role_id INT,
-    manger_id INT,
+    manager_id INT,
     PRIMARY KEY(id)
 );
 
