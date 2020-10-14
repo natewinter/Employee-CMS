@@ -1,5 +1,5 @@
 // Dependencies
-var inquirer = require("inquier");
+var inquirer = require("inquirer");
 var mysql = require("mysql");
 
 const connection = mysql.createConnection({
