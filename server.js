@@ -42,10 +42,12 @@ function start() {
     })
 }
 
+
 function allDepartments() {
     connection.query("SELECT * FROM departmentTb", function (err, data) {
         if (err) throw err
         console.table(data)
+        start()
     })
 }
 
@@ -53,6 +55,7 @@ function allRoles() {
     connection.query("SELECT * FROM roleTb", function (err, data) {
         if (err) throw err
         console.table(data)
+        start()
     })
 }
 
@@ -60,6 +63,7 @@ function allEmployees() {
     connection.query("SELECT * FROM employeeTb", function (err, data) {
         if (err) throw err
         console.table(data)
+        start()
     })
 }
 
@@ -124,7 +128,7 @@ function addEmployee() {
             type: "input",
             message: "what is the last name of the employee you'd like to add?"
         }, {
-            name: "managerid",
+            name: "managerId",
             type: "confirm",
             message: "is this employee a manager?"
 
@@ -137,7 +141,7 @@ function addEmployee() {
             connection.query("INSERT INTO employeeTb SET ?", {
                 first_name: answers.firstName,
                 last_name: answers.lastName,
-                manager_id: answers.managerid,
+                manager_id: answers.managerId,
                 role_id: answers.roleId
             }, function (err) {
                 if (err) throw err

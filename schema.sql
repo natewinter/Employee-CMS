@@ -25,11 +25,3 @@ CREATE TABLE employeeTb(
     PRIMARY KEY(id)
 );
 
-INSERT INTO departmentTb(name)
-VALUE ("Garden");
-
-INSERT INTO roleTb(title, salary)
-VALUE ("garden hand", 420.20);
-
-INSERT INTO employeeTb(first_name,last_name,role_id)
-VALUE ("J", "B",1);
